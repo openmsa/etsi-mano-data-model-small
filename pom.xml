@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ubiqube.mano</groupId>
+		<artifactId>mano-super-pom</artifactId>
+		<version>3.1.0-SNAPSHOT</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<artifactId>mano-data-model-small</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+	<module>mano-db-vim</module>
+	<module>mano-db-auth</module>
+	<module>mano-db-audit</module>
+	<module>mano-db-utils</module>
+	<module>mano-db-subscription</module>
+	<module>mano-db-api-version</module>
+	<module>mano-db-rfc7807</module>
+	<module>mano-db-base</module>
+	<module>mano-db-vnffg</module>
+	</modules>
+	<scm>
+		<developerConnection>scm:git:https://github.com/openmsa/etsi-mano-data-model-small.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+	<properties>
+	</properties>
+</project>
