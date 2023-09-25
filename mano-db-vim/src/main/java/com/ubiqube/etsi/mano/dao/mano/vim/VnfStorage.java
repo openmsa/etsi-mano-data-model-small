@@ -31,7 +31,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 
 /**
  *
@@ -54,7 +54,7 @@ public class VnfStorage implements ImageServiceAware, ToscaEntity, Auditable {
 
 	private String type;
 
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private SoftwareImage softwareImage;
 
 	private long size;

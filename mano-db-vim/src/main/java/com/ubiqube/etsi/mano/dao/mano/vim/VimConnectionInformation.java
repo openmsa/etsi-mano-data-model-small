@@ -1,4 +1,20 @@
 /**
+ *     Copyright (C) 2019-2023 Ubiqube.
+ *
+ *     This program is free software: you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation, either version 3 of the License, or
+ *     (at your option) any later version.
+ *
+ *     This program is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU General Public License for more details.
+ *
+ *     You should have received a copy of the GNU General Public License
+ *     along with this program.  If not, see https://www.gnu.org/licenses/.
+ */
+/**
  * This copy of Woodstox XML processor is licensed under the
  * Apache (Software) License, version 2.0 ("the License").
  * See the License for details about distribution rights, and the
@@ -18,6 +34,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
+import org.hibernate.annotations.TenantId;
 import org.hibernate.search.mapper.pojo.mapping.definition.annotation.DocumentId;
 import org.hibernate.search.mapper.pojo.mapping.definition.annotation.FullTextField;
 import org.hibernate.search.mapper.pojo.mapping.definition.annotation.Indexed;
@@ -92,6 +109,9 @@ public class VimConnectionInformation implements Auditable {
 	// vnfBlueprint.
 	// @Version
 	private long version;
+
+	@TenantId
+	private String tenantId;
 
 	private Audit audit;
 

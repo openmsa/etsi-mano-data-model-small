@@ -26,20 +26,7 @@
  * A copy is also included in the downloadable source code package containing
  * Woodstox, in file "ASL2.0", under the same directory as this file.
  */
-module com.ubiqube.etsi.mano.dao.mano.vim {
-	exports com.ubiqube.etsi.mano.dao.mano.vim;
+module com.ubiqube.etsi.mano.dao.base {
+	exports com.ubiqube.etsi.mano.dao.base;
 
-	requires transitive com.ubiqube.etsi.mano.dao.audit;
-	requires transitive com.ubiqube.etsi.mano.service.auth.model;
-	requires com.ubiqube.etsi.mano.dao.rfc7807;
-	requires com.ubiqube.etsi.mano.dao.subscription;
-	requires com.ubiqube.etsi.mano.utils;
-	requires com.ubiqube.etsi.mano.dao.mano.version;
-	requires com.ubiqube.etsi.mano.dao.base;
-	requires org.hibernate.orm.core;
-	requires lombok;
-	requires jakarta.annotation;
-	requires jakarta.persistence;
-	requires com.fasterxml.jackson.annotation;
-	requires org.hibernate.search.mapper.pojo;
 }
