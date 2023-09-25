@@ -25,8 +25,10 @@ import jakarta.persistence.Embeddable;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
@@ -38,6 +40,8 @@ import lombok.Setter;
 @Setter
 @Embeddable
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class AuthentificationInformations implements Serializable {
 	/** Serial. */
 	private static final long serialVersionUID = 1L;
