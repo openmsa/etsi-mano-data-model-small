@@ -57,6 +57,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -100,8 +101,9 @@ public class Servers extends ServerConnection {
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Set<ApiVersion> versions;
 
-	@OneToOne
-	private LocalAuth remoteSubscription;
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@NotNull
+	private LocalAuth localUser = new LocalAuth();
 
 	@TenantId
 	private String tenantId;
