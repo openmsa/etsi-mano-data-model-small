@@ -44,7 +44,7 @@ public class FailureDetails implements Serializable {
 	private String title;
 
 	@Column(nullable = true)
-	private long status;
+	private Long status;
 
 	@Column(length = 500)
 	private String detail;
@@ -92,11 +92,11 @@ public class FailureDetails implements Serializable {
 		this.title = title;
 	}
 
-	public long getStatus() {
+	public Long getStatus() {
 		return status;
 	}
 
-	public void setStatus(final long status) {
+	public void setStatus(final Long status) {
 		this.status = status;
 	}
 
