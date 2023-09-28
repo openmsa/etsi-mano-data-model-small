@@ -18,11 +18,13 @@ package com.ubiqube.etsi.mano.utils;
 
 import java.net.URI;
 
-import jakarta.persistence.AttributeConverter;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
+
+@Converter(autoApply = true)
 public class UriConverter implements AttributeConverter<URI, String> {
 
 	private static final Logger LOG = LoggerFactory.getLogger(UriConverter.class);
