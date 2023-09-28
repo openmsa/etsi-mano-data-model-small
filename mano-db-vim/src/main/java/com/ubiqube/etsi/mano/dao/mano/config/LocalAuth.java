@@ -17,6 +17,7 @@
 package com.ubiqube.etsi.mano.dao.mano.config;
 
 import java.io.Serializable;
+import java.net.URI;
 import java.util.UUID;
 
 import jakarta.persistence.Entity;
@@ -30,6 +31,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Store OAuth2 credential and endpoint.
+ *
+ * @author Olivier Vignaud
+ */
 @Builder
 @Entity
 @Getter
@@ -44,9 +50,21 @@ public class LocalAuth implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID id;
 
+	/**
+	 * Client ID.
+	 */
 	@NotNull
 	private String clientId;
 
+	/**
+	 * Client secret.
+	 */
 	@NotNull
 	private String clientSecret;
+
+	/**
+	 * OAuth2 endpoint url;
+	 */
+	@NotNull
+	private URI tokenEndpoint;
 }
