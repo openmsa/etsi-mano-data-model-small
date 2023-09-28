@@ -17,6 +17,7 @@
 package com.ubiqube.etsi.mano.service.auth.model;
 
 import java.io.Serializable;
+import java.net.URI;
 import java.util.UUID;
 
 import jakarta.annotation.Nonnull;
@@ -62,7 +63,7 @@ public class ServerConnection implements Serializable {
 
 	@Nonnull
 	@NotNull
-	private String url;
+	private URI url;
 
 	private boolean ignoreSsl;
 
@@ -78,7 +79,7 @@ public class ServerConnection implements Serializable {
 	@Version
 	private long tupleVersion;
 
-	public ServerConnection(final AuthentificationInformations authentication, @Nonnull final String callbackUri) {
+	public ServerConnection(final AuthentificationInformations authentication, @Nonnull final URI callbackUri) {
 		this.authentification = authentication;
 		this.url = callbackUri;
 	}

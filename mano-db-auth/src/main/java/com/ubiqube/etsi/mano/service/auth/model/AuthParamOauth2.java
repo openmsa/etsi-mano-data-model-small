@@ -17,6 +17,7 @@
 package com.ubiqube.etsi.mano.service.auth.model;
 
 import java.io.Serializable;
+import java.net.URI;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
@@ -39,7 +40,7 @@ public class AuthParamOauth2 implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String clientId;
 	private String clientSecret;
-	private String tokenEndpoint;
+	private URI tokenEndpoint;
 	private String o2Username;
 	private String o2Password;
 	private Boolean o2IgnoreSsl;
