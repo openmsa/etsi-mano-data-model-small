@@ -35,9 +35,6 @@ import java.util.Set;
 import java.util.UUID;
 
 import org.hibernate.annotations.TenantId;
-import org.hibernate.search.mapper.pojo.mapping.definition.annotation.DocumentId;
-import org.hibernate.search.mapper.pojo.mapping.definition.annotation.FullTextField;
-import org.hibernate.search.mapper.pojo.mapping.definition.annotation.Indexed;
 
 import com.ubiqube.etsi.mano.dao.audit.Audit;
 import com.ubiqube.etsi.mano.dao.audit.AuditListener;
@@ -68,22 +65,18 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Indexed
 @EntityListeners(AuditListener.class)
 public class VimConnectionInformation implements Auditable {
 	/** Serial. */
 	private static final long serialVersionUID = 1L;
 
-	@DocumentId
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID id = null;
 
-	@FullTextField
 	@Column(unique = true)
 	private String vimId = null;
 
-	@FullTextField
 	private String vimType = null;
 
 	@ElementCollection(fetch = FetchType.EAGER)
