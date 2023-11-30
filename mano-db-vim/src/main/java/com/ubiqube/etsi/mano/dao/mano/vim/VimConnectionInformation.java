@@ -40,6 +40,7 @@ import com.ubiqube.etsi.mano.dao.audit.Audit;
 import com.ubiqube.etsi.mano.dao.audit.AuditListener;
 import com.ubiqube.etsi.mano.dao.audit.Auditable;
 import com.ubiqube.etsi.mano.dao.mano.vim.vnfi.CnfInformations;
+import com.ubiqube.etsi.mano.dao.mano.vim.vnfi.JujuInformations;
 import com.ubiqube.etsi.mano.dao.mano.vim.vnfi.VimCapability;
 import com.ubiqube.etsi.mano.utils.ToStringUtil;
 
@@ -90,6 +91,9 @@ public class VimConnectionInformation implements Auditable {
 
 	@Embedded
 	private CnfInformations cnfInfo;
+	
+	@Embedded
+	private JujuInformations jujuInfo;
 	/**
 	 * Capabilities of the vim. Read VimCapabilites Enum to figure out what we can
 	 * do.
