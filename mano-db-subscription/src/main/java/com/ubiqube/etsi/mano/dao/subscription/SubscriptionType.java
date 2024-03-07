@@ -51,9 +51,10 @@ public enum SubscriptionType {
 	NSDVNF("NSDVNF"),
 	NSPM("NSPM"),
 	NSFM("NSFM"),
+	NSNFVI("NSNFVI"),
 	;
 
-	private String value;
+	private final String value;
 
 	SubscriptionType(final String string) {
 		value = string;
