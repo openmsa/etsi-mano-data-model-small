@@ -19,6 +19,7 @@ package com.ubiqube.etsi.mano.service.auth.model;
 import jakarta.annotation.Nullable;
 
 public enum ApiTypesEnum {
+	SOL002("SOL00Z"),
 	SOL003("SOL003"),
 	SOL005("SOL005");
 
