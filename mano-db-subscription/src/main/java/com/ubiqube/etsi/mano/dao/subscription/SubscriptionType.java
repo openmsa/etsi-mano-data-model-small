@@ -52,6 +52,9 @@ public enum SubscriptionType {
 	NSPM("NSPM"),
 	NSFM("NSFM"),
 	NSNFVI("NSNFVI"),
+	VNFSNAPSHOTPKGM("VNFSNAPSHOTPKGM"),
+	GRANT("GRANT"),
+	VNFCONFIG("VNFCONFIG"),
 	;
 
 	private final String value;
