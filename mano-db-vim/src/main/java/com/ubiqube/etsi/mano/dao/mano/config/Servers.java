@@ -38,6 +38,8 @@ import java.util.UUID;
 import org.hibernate.annotations.TenantId;
 
 import com.ubiqube.etsi.mano.dao.audit.Audit;
+import com.ubiqube.etsi.mano.dao.audit.AuditListener;
+import com.ubiqube.etsi.mano.dao.audit.Auditable;
 import com.ubiqube.etsi.mano.dao.mano.version.ApiVersion;
 import com.ubiqube.etsi.mano.dao.mano.vim.PlanStatusType;
 import com.ubiqube.etsi.mano.dao.rfc7807.FailureDetails;
@@ -53,6 +55,7 @@ import jakarta.annotation.Nullable;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EntityListeners;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
@@ -70,7 +73,8 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Servers extends ServerConnection {
+@EntityListeners(AuditListener.class)
+public class Servers extends ServerConnection implements Auditable {
 	/** Serial. */
 	private static final long serialVersionUID = 1L;
 
