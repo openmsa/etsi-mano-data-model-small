@@ -116,4 +116,8 @@ public class FailureDetails implements Serializable {
 		this.instance = instance;
 	}
 
+	@Override
+	public String toString() {
+		return "status: " + status + ", detail: " + detail;
+	}
 }
