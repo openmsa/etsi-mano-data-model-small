@@ -33,9 +33,9 @@ package com.ubiqube.etsi.mano.dao.audit;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
 
-import jakarta.persistence.Embeddable;
-
 import org.springframework.data.annotation.LastModifiedDate;
+
+import jakarta.persistence.Embeddable;
 
 @Embeddable
 public class Audit implements Serializable {
