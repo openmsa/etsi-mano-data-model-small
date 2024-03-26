@@ -36,7 +36,9 @@ import java.time.OffsetDateTime;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import jakarta.persistence.Embeddable;
+import lombok.Data;
 
+@Data
 @Embeddable
 public class Audit implements Serializable {
 
