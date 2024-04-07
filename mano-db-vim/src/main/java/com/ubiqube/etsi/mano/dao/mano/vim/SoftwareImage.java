@@ -17,6 +17,7 @@
 package com.ubiqube.etsi.mano.dao.mano.vim;
 
 import java.time.OffsetDateTime;
+import java.util.Map;
 import java.util.UUID;
 
 import com.ubiqube.etsi.mano.dao.audit.Audit;
@@ -24,6 +25,7 @@ import com.ubiqube.etsi.mano.dao.audit.AuditListener;
 import com.ubiqube.etsi.mano.dao.audit.Auditable;
 
 import jakarta.annotation.Nullable;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
@@ -106,4 +108,6 @@ public class SoftwareImage implements Auditable {
 
 	private Audit audit;
 
+	@ElementCollection
+	private Map<String, String> userMetadata;
 }
