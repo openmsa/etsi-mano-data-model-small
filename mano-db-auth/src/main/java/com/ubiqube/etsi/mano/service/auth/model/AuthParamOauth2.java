@@ -19,6 +19,8 @@ package com.ubiqube.etsi.mano.service.auth.model;
 import java.io.Serializable;
 import java.net.URI;
 
+import com.ubiqube.etsi.mano.utils.ToStringUtil;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.EnumType;
@@ -48,5 +50,10 @@ public class AuthParamOauth2 implements Serializable {
 	private OAuth2GrantType grantType;
 	@Column(length = 5000)
 	private String o2AuthTlsCert;
+
+	@Override
+	public String toString() {
+		return ToStringUtil.toString(this);
+	}
 
 }

@@ -18,6 +18,8 @@ package com.ubiqube.etsi.mano.service.auth.model;
 
 import java.io.Serializable;
 
+import com.ubiqube.etsi.mano.utils.ToStringUtil;
+
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -36,5 +38,10 @@ public class AuthParamBasic implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String userName;
 	private String password;
+
+	@Override
+	public String toString() {
+		return ToStringUtil.toString(this);
+	}
 
 }
