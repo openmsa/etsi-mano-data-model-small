@@ -80,12 +80,15 @@ public class Servers extends ServerConnection implements Auditable {
 
 	@Builder
 	public Servers(final UUID id, final String name, final AuthentificationInformations authentification, @Nonnull final URI url, final boolean ignoreSsl, final String tlsCert, @Nullable final String version, @Nullable final ServerType serverType, final long tupleVersion,
-			final Set<RemoteSubscription> remoteSubscriptions, final PlanStatusType serverStatus, final SubscriptionType subscriptionType, final Set<String> capabilities) {
+			final Set<RemoteSubscription> remoteSubscriptions, final PlanStatusType serverStatus, final SubscriptionType subscriptionType, final Set<String> capabilities,
+			final @Nonnull LocalAuth localUser, final String tenantId) {
 		super(id, name, authentification, url, ignoreSsl, tlsCert, version, serverType, tupleVersion);
 		this.remoteSubscriptions = remoteSubscriptions;
 		this.serverStatus = serverStatus;
 		this.subscriptionType = subscriptionType;
 		this.capabilities = capabilities;
+		this.localUser = localUser;
+		this.tenantId = tenantId;
 	}
 
 	@Enumerated(EnumType.STRING)
