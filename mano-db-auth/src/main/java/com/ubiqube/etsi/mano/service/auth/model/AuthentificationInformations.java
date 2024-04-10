@@ -19,6 +19,8 @@ package com.ubiqube.etsi.mano.service.auth.model;
 import java.io.Serializable;
 import java.util.List;
 
+import com.ubiqube.etsi.mano.utils.ToStringUtil;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Embeddable;
@@ -56,4 +58,8 @@ public class AuthentificationInformations implements Serializable {
 	@Column(length = 5000)
 	private String authTlsCert;
 
+	@Override
+	public String toString() {
+		return ToStringUtil.toString(this);
+	}
 }
