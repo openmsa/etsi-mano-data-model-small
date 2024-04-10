@@ -20,6 +20,8 @@ import java.io.Serializable;
 import java.net.URI;
 import java.util.UUID;
 
+import com.ubiqube.etsi.mano.utils.ToStringUtil;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -67,4 +69,9 @@ public class LocalAuth implements Serializable {
 	 */
 	@NotNull
 	private URI tokenEndpoint;
+
+	@Override
+	public String toString() {
+		return ToStringUtil.toString(this);
+	}
 }
