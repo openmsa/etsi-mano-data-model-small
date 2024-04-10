@@ -30,37 +30,37 @@
 		<dependency>
 			<groupId>com.ubiqube.mano</groupId>
 			<artifactId>mano-db-audit</artifactId>
-			<version>4.0.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ubiqube.mano</groupId>
 			<artifactId>mano-db-auth</artifactId>
-			<version>4.0.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ubiqube.mano</groupId>
 			<artifactId>mano-db-base</artifactId>
-			<version>4.0.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ubiqube.mano</groupId>
 			<artifactId>mano-db-subscription</artifactId>
-			<version>4.0.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ubiqube.mano</groupId>
 			<artifactId>mano-db-utils</artifactId>
-			<version>4.0.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ubiqube.mano</groupId>
 			<artifactId>mano-db-api-version</artifactId>
-			<version>4.0.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ubiqube.mano</groupId>
 			<artifactId>mano-db-rfc7807</artifactId>
-			<version>4.0.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
