@@ -55,6 +55,7 @@ public enum SubscriptionType {
 	VNFSNAPSHOTPKGM("VNFSNAPSHOTPKGM"),
 	GRANT("GRANT"),
 	VNFCONFIG("VNFCONFIG"),
+	LOGM("LOGM"),
 	;
 
 	private final String value;
