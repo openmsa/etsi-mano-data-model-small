@@ -36,6 +36,7 @@ public class JujuInformations implements Serializable{
 	private String region;	
 	private String constraints;	
 	private String networkId;
+	private String flavorName;
 	private String charmName;
 	private String appName;
 	private String osSeries;
