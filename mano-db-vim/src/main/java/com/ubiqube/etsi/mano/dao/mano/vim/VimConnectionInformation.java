@@ -30,6 +30,7 @@
  */
 package com.ubiqube.etsi.mano.dao.mano.vim;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
@@ -81,17 +82,17 @@ public class VimConnectionInformation implements Auditable {
 	private String vimType = null;
 
 	@ElementCollection(fetch = FetchType.EAGER)
-	private Map<String, String> interfaceInfo = null;
+	private Map<String, String> interfaceInfo = new LinkedHashMap<>();
 
 	@ElementCollection(fetch = FetchType.EAGER)
-	private Map<String, String> accessInfo = null;
+	private Map<String, String> accessInfo = new LinkedHashMap<>();
 
 	@ElementCollection(fetch = FetchType.EAGER)
-	private Map<String, String> extra = null;
+	private Map<String, String> extra = new LinkedHashMap<>();
 
 	@Embedded
 	private CnfInformations cnfInfo;
-	
+
 	@Embedded
 	private JujuInformations jujuInfo;
 	/**

@@ -29,6 +29,7 @@ import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @EntityListeners(AuditListener.class)
@@ -42,6 +43,7 @@ public class SecurityGroup implements BaseEntity, Auditable {
 
 	private String toscaId;
 
+	@NotNull
 	private String toscaName;
 
 	private String state;
