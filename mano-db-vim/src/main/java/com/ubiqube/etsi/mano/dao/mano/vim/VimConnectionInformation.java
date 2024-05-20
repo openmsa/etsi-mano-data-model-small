@@ -56,6 +56,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -74,18 +75,18 @@ public class VimConnectionInformation implements Auditable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private UUID id = null;
+	private UUID id;
 
 	@Column(unique = true)
-	private String vimId = null;
+	private String vimId;
 
-	private String vimType = null;
+	private String vimType;
 
-	@ElementCollection(fetch = FetchType.EAGER)
-	private Map<String, String> interfaceInfo = new LinkedHashMap<>();
+	@OneToOne
+	private InterfaceInfo interfaceInfo = new InterfaceInfo();
 
-	@ElementCollection(fetch = FetchType.EAGER)
-	private Map<String, String> accessInfo = new LinkedHashMap<>();
+	@OneToOne
+	private AccessInfo accessInfo = new AccessInfo();
 
 	@ElementCollection(fetch = FetchType.EAGER)
 	private Map<String, String> extra = new LinkedHashMap<>();
