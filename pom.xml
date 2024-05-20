@@ -19,6 +19,7 @@
 	<module>mano-db-rfc7807</module>
 	<module>mano-db-base</module>
 	<module>mano-db-vnffg</module>
+	<module>mano-db-connection</module>
 	</modules>
 	<scm>
 		<developerConnection>scm:git:https://github.com/openmsa/etsi-mano-data-model-small.git</developerConnection>

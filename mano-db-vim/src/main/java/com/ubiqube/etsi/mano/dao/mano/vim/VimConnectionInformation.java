@@ -30,16 +30,14 @@
  */
 package com.ubiqube.etsi.mano.dao.mano.vim;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.Set;
-import java.util.UUID;
 
 import org.hibernate.annotations.TenantId;
 
 import com.ubiqube.etsi.mano.dao.audit.Audit;
 import com.ubiqube.etsi.mano.dao.audit.AuditListener;
 import com.ubiqube.etsi.mano.dao.audit.Auditable;
+import com.ubiqube.etsi.mano.dao.mano.Connection;
 import com.ubiqube.etsi.mano.dao.mano.vim.vnfi.CnfInformations;
 import com.ubiqube.etsi.mano.dao.mano.vim.vnfi.JujuInformations;
 import com.ubiqube.etsi.mano.dao.mano.vim.vnfi.VimCapability;
@@ -53,10 +51,6 @@ import jakarta.persistence.EntityListeners;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -69,27 +63,14 @@ import lombok.Setter;
 @Setter
 @Entity
 @EntityListeners(AuditListener.class)
-public class VimConnectionInformation implements Auditable {
+public class VimConnectionInformation extends Connection implements Auditable {
 	/** Serial. */
 	private static final long serialVersionUID = 1L;
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private UUID id;
 
 	@Column(unique = true)
 	private String vimId;
 
 	private String vimType;
-
-	@OneToOne
-	private InterfaceInfo interfaceInfo = new InterfaceInfo();
-
-	@OneToOne
-	private AccessInfo accessInfo = new AccessInfo();
-
-	@ElementCollection(fetch = FetchType.EAGER)
-	private Map<String, String> extra = new LinkedHashMap<>();
 
 	@Embedded
 	private CnfInformations cnfInfo;

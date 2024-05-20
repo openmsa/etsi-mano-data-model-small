@@ -14,7 +14,7 @@
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see https://www.gnu.org/licenses/.
  */
-package com.ubiqube.etsi.mano.dao.mano.vim;
+package com.ubiqube.etsi.mano.dao.mano;
 
 import java.io.Serializable;
 import java.util.UUID;

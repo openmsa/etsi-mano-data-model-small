@@ -14,18 +14,9 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see https://www.gnu.org/licenses/.
  */
-module com.ubiqube.etsi.mano.dao.mano.vim {
-	exports com.ubiqube.etsi.mano.dao.mano.vim;
+module com.ubiqube.etsi.mano.dao.mano {
+	exports com.ubiqube.etsi.mano.dao.mano;
 
-	requires transitive com.ubiqube.etsi.mano.dao.audit;
-	requires transitive com.ubiqube.etsi.mano.service.auth.model;
-	requires com.ubiqube.etsi.mano.dao.mano;
-	requires com.ubiqube.etsi.mano.dao.rfc7807;
-	requires com.ubiqube.etsi.mano.dao.subscription;
-	requires com.ubiqube.etsi.mano.utils;
-	requires com.ubiqube.etsi.mano.dao.mano.version;
-	requires com.ubiqube.etsi.mano.dao.base;
-	requires org.hibernate.orm.core;
 	requires lombok;
 	requires jakarta.annotation;
 	requires jakarta.persistence;
