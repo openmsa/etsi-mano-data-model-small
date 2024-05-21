@@ -21,6 +21,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.UUID;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -41,10 +42,11 @@ public class Connection implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID id;
-	@OneToOne
+
+	@OneToOne(cascade = CascadeType.ALL)
 	private InterfaceInfo interfaceInfo = new InterfaceInfo();
 
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private AccessInfo accessInfo = new AccessInfo();
 
 	@ElementCollection(fetch = FetchType.EAGER)
