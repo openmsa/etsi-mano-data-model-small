@@ -81,6 +81,12 @@ public class K8sServers implements Serializable {
 	@Column(length = 5000)
 	private String userCrt;
 
+	/**
+	 * User KEY.
+	 */
+	@Column(length = 5000)
+	private String userKey;
+
 	private String apiAddress;
 
 	/**
