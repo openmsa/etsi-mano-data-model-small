@@ -34,7 +34,6 @@ import java.io.Serializable;
 
 import com.ubiqube.etsi.mano.utils.ToStringUtil;
 
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
@@ -55,7 +54,8 @@ public class CnfInformations implements Serializable {
 
 	private String masterFlavorId;
 
-	@Nonnull
+	private String workerFlavorId;
+
 	private String clusterTemplate;
 
 	@Nullable
@@ -69,6 +69,10 @@ public class CnfInformations implements Serializable {
 
 	@Nullable
 	private VmServerType serverType = VmServerType.VM;
+
+	private String images;
+
+	private String k8sVersion = "v1.29.2";
 
 	@Override
 	public String toString() {
