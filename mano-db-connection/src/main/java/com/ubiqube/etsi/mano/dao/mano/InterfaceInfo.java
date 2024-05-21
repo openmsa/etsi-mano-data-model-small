@@ -61,10 +61,12 @@ public class InterfaceInfo implements Serializable {
 	 */
 	private int retry = 5;
 
+	@JsonProperty("interface")
 	private String iface;
 
 	@JsonProperty("region-name")
 	private String regionName;
+
 	@JsonProperty("sdn-endpoint")
 	private String sdnEndpoint;
 }
