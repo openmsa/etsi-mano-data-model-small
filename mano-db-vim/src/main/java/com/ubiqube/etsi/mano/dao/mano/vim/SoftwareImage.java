@@ -63,6 +63,7 @@ public class SoftwareImage implements Auditable {
 	private String version;
 
 	@Embedded
+	@Nullable
 	private Checksum checksum;
 
 	private Boolean isEncrypted;
