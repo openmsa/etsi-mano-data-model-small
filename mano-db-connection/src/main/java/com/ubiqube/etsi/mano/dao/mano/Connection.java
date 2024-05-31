@@ -35,7 +35,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Connection implements Serializable {
+public class Connection<I extends InterfaceInfo, A extends AccessInfo> implements Serializable {
 	/** Serial. */
 	private static final long serialVersionUID = 1L;
 
@@ -43,11 +43,11 @@ public class Connection implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID id;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	private InterfaceInfo interfaceInfo = new InterfaceInfo();
+	@OneToOne(cascade = CascadeType.ALL, targetEntity = InterfaceInfo.class)
+	private I interfaceInfo;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	private AccessInfo accessInfo = new AccessInfo();
+	@OneToOne(cascade = CascadeType.ALL, targetEntity = AccessInfo.class)
+	private A accessInfo;
 
 	@ElementCollection(fetch = FetchType.EAGER)
 	private Map<String, String> extra = new LinkedHashMap<>();

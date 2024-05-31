@@ -12,42 +12,38 @@
  *     GNU General Public License for more details.
  *
  *     You should have received a copy of the GNU General Public License
- *     along with this program.  If not, see https://www.gnu.org/licenses/.
+ *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-package com.ubiqube.etsi.mano.dao.mano;
+package com.ubiqube.etsi.mano.dao.mano.ai;
 
-import java.io.Serializable;
+import java.util.List;
 import java.util.UUID;
 
+import com.ubiqube.etsi.mano.dao.mano.AccessInfo;
+
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-@AllArgsConstructor
 @Data
 @Entity
 @NoArgsConstructor
 @SuperBuilder
-public class AccessInfo implements Serializable {
+public class OAuth2Access extends AccessInfo {
+	private String accessTokenUrl;
+	private String grantType;
+	private String clientId;
+	private String pawword;
+	private List<String> scopes;
 
-	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private UUID id;
+	public OAuth2Access(final UUID id, final String accessTokenUrl, final String grantType, final String clientId, final String pawword, final List<String> scopes) {
+		super(id);
+		this.accessTokenUrl = accessTokenUrl;
+		this.grantType = grantType;
+		this.clientId = clientId;
+		this.pawword = pawword;
+		this.scopes = scopes;
+	}
 
-//	private String username;
-//	private String password;
-	// OS + contrail
-//	private String userDomain;
-//	private String project;
-//	private String projectId;
-//	private String projectDomain;
-//	private String projectName;
-//	// SDN
-//	private String sdnDomain;
 }

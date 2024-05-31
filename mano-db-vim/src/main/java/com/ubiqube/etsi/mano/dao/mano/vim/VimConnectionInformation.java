@@ -38,6 +38,8 @@ import com.ubiqube.etsi.mano.dao.audit.Audit;
 import com.ubiqube.etsi.mano.dao.audit.AuditListener;
 import com.ubiqube.etsi.mano.dao.audit.Auditable;
 import com.ubiqube.etsi.mano.dao.mano.Connection;
+import com.ubiqube.etsi.mano.dao.mano.InterfaceInfo;
+import com.ubiqube.etsi.mano.dao.mano.ai.KeystoneAuthV3;
 import com.ubiqube.etsi.mano.dao.mano.vim.vnfi.CnfInformations;
 import com.ubiqube.etsi.mano.dao.mano.vim.vnfi.JujuInformations;
 import com.ubiqube.etsi.mano.dao.mano.vim.vnfi.VimCapability;
@@ -63,7 +65,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @EntityListeners(AuditListener.class)
-public class VimConnectionInformation extends Connection implements Auditable {
+public class VimConnectionInformation extends Connection<InterfaceInfo, KeystoneAuthV3> implements Auditable {
 	/** Serial. */
 	private static final long serialVersionUID = 1L;
 

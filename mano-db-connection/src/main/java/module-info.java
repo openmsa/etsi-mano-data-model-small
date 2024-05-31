@@ -16,6 +16,8 @@
  */
 module com.ubiqube.etsi.mano.dao.mano {
 	exports com.ubiqube.etsi.mano.dao.mano;
+	exports com.ubiqube.etsi.mano.dao.mano.ai;
+	exports com.ubiqube.etsi.mano.dao.mano.ii;
 
 	requires lombok;
 	requires jakarta.annotation;

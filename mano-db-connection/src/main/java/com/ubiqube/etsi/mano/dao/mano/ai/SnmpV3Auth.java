@@ -12,42 +12,38 @@
  *     GNU General Public License for more details.
  *
  *     You should have received a copy of the GNU General Public License
- *     along with this program.  If not, see https://www.gnu.org/licenses/.
+ *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-package com.ubiqube.etsi.mano.dao.mano;
+package com.ubiqube.etsi.mano.dao.mano.ai;
 
-import java.io.Serializable;
 import java.util.UUID;
 
+import com.ubiqube.etsi.mano.dao.mano.AccessInfo;
+
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-@AllArgsConstructor
 @Data
 @Entity
 @NoArgsConstructor
 @SuperBuilder
-public class AccessInfo implements Serializable {
-
+public class SnmpV3Auth extends AccessInfo {
 	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private UUID id;
+	private String securityName;
+	private String privacyPassphrase;
+	private String authenticationProtocol;
+	private String authenticationPassphrase;
+	private String privacyProtocol;
 
-//	private String username;
-//	private String password;
-	// OS + contrail
-//	private String userDomain;
-//	private String project;
-//	private String projectId;
-//	private String projectDomain;
-//	private String projectName;
-//	// SDN
-//	private String sdnDomain;
+	public SnmpV3Auth(final UUID id, final String securityName, final String privacyPassphrase, final String authenticationProtocol, final String authenticationPassphrase, final String privacyProtocol) {
+		super(id);
+		this.securityName = securityName;
+		this.privacyPassphrase = privacyPassphrase;
+		this.authenticationProtocol = authenticationProtocol;
+		this.authenticationPassphrase = authenticationPassphrase;
+		this.privacyProtocol = privacyProtocol;
+	}
+
 }
