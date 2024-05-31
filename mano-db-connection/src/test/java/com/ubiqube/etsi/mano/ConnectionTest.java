@@ -16,18 +16,21 @@
  */
 package com.ubiqube.etsi.mano;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import org.junit.jupiter.api.Test;
 
 import com.ubiqube.etsi.mano.dao.mano.Connection;
 import com.ubiqube.etsi.mano.dao.mano.InterfaceInfo;
 import com.ubiqube.etsi.mano.dao.mano.OpenstackKeystoneV3Connection;
 import com.ubiqube.etsi.mano.dao.mano.ai.KeystoneAuthV3;
 
-public class ConnectionTest {
+class ConnectionTest {
 
 	@Test
 	void testName() throws Exception {
 		final Connection<InterfaceInfo, KeystoneAuthV3> osv3;
 		final OpenstackKeystoneV3Connection t = new OpenstackKeystoneV3Connection();
+		assertNotNull(t);
 	}
 }
