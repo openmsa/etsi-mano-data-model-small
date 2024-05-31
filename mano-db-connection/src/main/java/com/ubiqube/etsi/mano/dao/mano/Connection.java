@@ -28,6 +28,8 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
 import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,6 +37,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Connection<I extends InterfaceInfo, A extends AccessInfo> implements Serializable {
 	/** Serial. */
 	private static final long serialVersionUID = 1L;
