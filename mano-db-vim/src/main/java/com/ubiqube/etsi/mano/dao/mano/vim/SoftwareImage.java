@@ -34,6 +34,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -56,6 +57,7 @@ public class SoftwareImage implements Auditable {
 
 	private String vimId;
 
+	@NotNull
 	private String name;
 
 	private String provider;
