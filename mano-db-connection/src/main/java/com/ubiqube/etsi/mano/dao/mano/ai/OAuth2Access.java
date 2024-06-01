@@ -21,6 +21,7 @@ import java.util.UUID;
 
 import com.ubiqube.etsi.mano.dao.mano.AccessInfo;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,10 +32,12 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @SuperBuilder
 public class OAuth2Access extends AccessInfo {
+	private static final long serialVersionUID = 1L;
 	private String accessTokenUrl;
 	private String grantType;
 	private String clientId;
 	private String pawword;
+	@ElementCollection
 	private List<String> scopes;
 
 	public OAuth2Access(final UUID id, final String accessTokenUrl, final String grantType, final String clientId, final String pawword, final List<String> scopes) {
