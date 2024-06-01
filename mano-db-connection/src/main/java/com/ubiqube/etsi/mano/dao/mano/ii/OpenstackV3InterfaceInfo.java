@@ -21,6 +21,7 @@ import java.util.List;
 import com.ubiqube.etsi.mano.dao.mano.InterfaceInfo;
 
 import jakarta.annotation.Nullable;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import lombok.Data;
 
@@ -34,6 +35,7 @@ public class OpenstackV3InterfaceInfo extends InterfaceInfo {
 	 * endpoint.
 	 */
 	@Nullable
+	@ElementCollection
 	private List<String> trustedCertificates;
 	/**
 	 * Certificate hostname check for the endpoint can be skipped by setting this
