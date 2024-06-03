@@ -14,31 +14,18 @@
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-package com.ubiqube.etsi.mano.dao.mano.ai;
+package com.ubiqube.etsi.mano.dao.mano;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.ubiqube.etsi.mano.dao.mano.AccessInfo;
+import com.ubiqube.etsi.mano.dao.mano.ai.KubernetesV1Auth;
+import com.ubiqube.etsi.mano.dao.mano.ii.K8sInterfaceInfo;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import lombok.Data;
-import lombok.experimental.SuperBuilder;
 
 @Data
 @Entity
-@SuperBuilder
-public class KubernetesV1Auth extends AccessInfo {
+public class K8sTlsConnection extends Connection<K8sInterfaceInfo, KubernetesV1Auth> {
 
 	private static final long serialVersionUID = 1L;
-
-	private String url;
-
-	@Column(length = 5000)
-	@JsonProperty("client-certificate-data")
-	private String clientCertificateData;
-
-	@Column(length = 5000)
-	@JsonProperty("client-key-data")
-	private String clientKeyData;
 
 }
