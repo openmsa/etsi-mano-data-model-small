@@ -19,6 +19,7 @@ package com.ubiqube.etsi.mano.dao.mano;
 import java.io.Serializable;
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Entity;
@@ -35,7 +36,9 @@ import lombok.Data;
 public class InterfaceInfo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+
 	@Id
+	@JsonIgnore
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID id;
 

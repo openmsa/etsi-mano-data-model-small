@@ -19,6 +19,8 @@ package com.ubiqube.etsi.mano.dao.mano;
 import java.io.Serializable;
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -39,7 +41,9 @@ import lombok.experimental.SuperBuilder;
 public class AccessInfo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+
 	@Id
+	@JsonIgnore
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID id;
 }
