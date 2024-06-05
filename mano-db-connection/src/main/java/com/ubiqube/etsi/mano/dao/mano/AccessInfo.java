@@ -42,15 +42,4 @@ public class AccessInfo implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID id;
-
-//	private String username;
-//	private String password;
-	// OS + contrail
-//	private String userDomain;
-//	private String project;
-//	private String projectId;
-//	private String projectDomain;
-//	private String projectName;
-//	// SDN
-//	private String sdnDomain;
 }
