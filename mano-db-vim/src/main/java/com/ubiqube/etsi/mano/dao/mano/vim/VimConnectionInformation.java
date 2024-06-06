@@ -39,6 +39,7 @@ import jakarta.persistence.EntityListeners;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -55,9 +56,11 @@ public class VimConnectionInformation<I extends InterfaceInfo, A extends AccessI
 	/** Serial. */
 	private static final long serialVersionUID = 1L;
 
+	@NotNull
 	@Column(unique = true)
 	private String vimId;
 
+	@NotNull
 	private String vimType;
 
 	@Embedded
