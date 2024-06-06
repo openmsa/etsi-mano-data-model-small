@@ -33,8 +33,6 @@ public class KubernetesV1Auth extends AccessInfo {
 
 	private static final long serialVersionUID = 1L;
 
-	private String url;
-
 	@Column(length = 5000)
 	@JsonProperty("client-certificate-data")
 	private String clientCertificateData;
