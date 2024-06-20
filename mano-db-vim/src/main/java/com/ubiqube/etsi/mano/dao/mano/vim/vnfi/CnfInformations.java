@@ -60,6 +60,10 @@ public class CnfInformations implements Serializable {
 
 	private String k8sVersion = "v1.29.2";
 
+	private String extNetworkId;
+
+	private int minNumberInstance = 1;
+
 	@Override
 	public String toString() {
 		return ToStringUtil.toString(this);
