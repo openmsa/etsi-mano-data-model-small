@@ -64,6 +64,12 @@ public class CnfInformations implements Serializable {
 
 	private int minNumberInstance = 1;
 
+	private ClusterOptionVersion cni;
+
+	private ClusterOptionVersion csi;
+
+	private ClusterOptionVersion ccm;
+
 	@Override
 	public String toString() {
 		return ToStringUtil.toString(this);
