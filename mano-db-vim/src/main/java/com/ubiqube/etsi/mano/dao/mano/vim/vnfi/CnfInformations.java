@@ -22,6 +22,7 @@ import com.ubiqube.etsi.mano.utils.ToStringUtil;
 
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -64,10 +65,13 @@ public class CnfInformations implements Serializable {
 
 	private int minNumberInstance = 1;
 
+	@OneToOne
 	private ClusterOptionVersion cni;
 
+	@OneToOne
 	private ClusterOptionVersion csi;
 
+	@OneToOne
 	private ClusterOptionVersion ccm;
 
 	@Override
