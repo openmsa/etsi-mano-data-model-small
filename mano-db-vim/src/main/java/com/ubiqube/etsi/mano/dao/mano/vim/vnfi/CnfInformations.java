@@ -21,6 +21,7 @@ import java.io.Serializable;
 import com.ubiqube.etsi.mano.utils.ToStringUtil;
 
 import jakarta.annotation.Nullable;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.OneToOne;
 import lombok.Getter;
@@ -53,19 +54,19 @@ public class CnfInformations implements Serializable {
 	private String extNetworkId;
 	private String extNetwork;
 
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private ClusterOptionVersion cni;
 
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private ClusterOptionVersion csi;
 
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private ClusterOptionVersion ccm;
 
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private ClusterMachine master;
 
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private ClusterMachine worker;
 
 	@Override
