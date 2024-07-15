@@ -39,12 +39,6 @@ public class CnfInformations implements Serializable {
 	/** Serial. */
 	private static final long serialVersionUID = 1L;
 
-	private String masterFlavorId;
-	private String masterFlavor;
-
-	private String workerFlavorId;
-	private String workerFlavor;
-
 	@Nullable
 	private String dnsServer;
 
@@ -54,14 +48,10 @@ public class CnfInformations implements Serializable {
 	@Nullable
 	private VmServerType serverType = VmServerType.VM;
 
-	private String images;
-
 	private String k8sVersion = "v1.30.2";
 
 	private String extNetworkId;
 	private String extNetwork;
-
-	private int minNumberInstance = 1;
 
 	@OneToOne
 	private ClusterOptionVersion cni;
@@ -71,6 +61,12 @@ public class CnfInformations implements Serializable {
 
 	@OneToOne
 	private ClusterOptionVersion ccm;
+
+	@OneToOne
+	private ClusterMachine master;
+
+	@OneToOne
+	private ClusterMachine worker;
 
 	@Override
 	public String toString() {
