@@ -36,16 +36,16 @@ public class OAuth2Access extends AccessInfo {
 	private String accessTokenUrl;
 	private String grantType;
 	private String clientId;
-	private String pawword;
+	private String password;
 	@ElementCollection
 	private List<String> scopes;
 
-	public OAuth2Access(final UUID id, final String accessTokenUrl, final String grantType, final String clientId, final String pawword, final List<String> scopes) {
+	public OAuth2Access(final UUID id, final String accessTokenUrl, final String grantType, final String clientId, final String password, final List<String> scopes) {
 		super(id);
 		this.accessTokenUrl = accessTokenUrl;
 		this.grantType = grantType;
 		this.clientId = clientId;
-		this.pawword = pawword;
+		this.password = password;
 		this.scopes = scopes;
 	}
 
