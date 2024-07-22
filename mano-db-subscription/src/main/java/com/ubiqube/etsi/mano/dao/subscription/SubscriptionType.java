@@ -42,6 +42,8 @@ public enum SubscriptionType {
 	GRANT("GRANT"),
 	VNFCONFIG("VNFCONFIG"),
 	LOGM("LOGM"),
+	LCMCOORD("LCMCOORD"),
+	NFVICI("NFVICI"),
 	;
 
 	private final String value;
