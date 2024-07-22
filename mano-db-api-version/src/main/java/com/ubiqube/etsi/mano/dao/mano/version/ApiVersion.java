@@ -22,6 +22,8 @@ import java.util.UUID;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -56,6 +58,7 @@ public class ApiVersion implements Serializable {
 
 	private String uriPrefix;
 
+	@Enumerated(EnumType.STRING)
 	private ApiVersionType type;
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

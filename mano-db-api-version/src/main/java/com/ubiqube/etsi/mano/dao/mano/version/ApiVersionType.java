@@ -39,7 +39,10 @@ public enum ApiVersionType {
 	SOL005_NSFM("nsfm"),
 	SOL005_NSLCM("nslcm"),
 	SOL005_NSPM("nspm"),
-	SOL002_VNFCONFIG("vnfconfig");
+	SOL002_VNFCONFIG("vnfconfig"),
+	SOL005_LCMCOORD("lcmcoord"),
+	SOL005_NFVICI("nfvici"),
+	SOL005_VNFSNAPSHOTPKGM("vnfsnapshotpkgm");
 
 	private final String value;
 
