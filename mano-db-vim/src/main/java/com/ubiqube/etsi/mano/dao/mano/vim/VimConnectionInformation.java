@@ -52,7 +52,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @EntityListeners(AuditListener.class)
-public class VimConnectionInformation<I extends InterfaceInfo, A extends AccessInfo> extends Connection<I, A> implements Auditable {
+public class VimConnectionInformation extends Connection<InterfaceInfo, AccessInfo> implements Auditable {
 	/** Serial. */
 	private static final long serialVersionUID = 1L;
 
