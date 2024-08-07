@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.ubiqube.mano</groupId>
 		<artifactId>mano-super-pom</artifactId>
-		<version>4.0.0</version>
+		<version>4.0.1-SNAPSHOT</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>mano-data-model-small</artifactId>
@@ -23,7 +23,7 @@
 	</modules>
 	<scm>
 		<developerConnection>scm:git:https://github.com/openmsa/etsi-mano-data-model-small.git</developerConnection>
-		<tag>mano-data-model-small-4.0.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 	<properties>
 	</properties>
