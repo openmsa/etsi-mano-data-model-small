@@ -21,7 +21,7 @@ import java.io.Serializable;
 import jakarta.persistence.Embeddable;
 
 /**
- * Missing NsL3ProtocolData#List<NsIpAllocationPool> ipAllocationPools.
+ * Missing NsL3ProtocolData#List NsIpAllocationPool ipAllocationPools.
  */
 @Embeddable
 public class L3Data implements Serializable {
@@ -35,15 +35,15 @@ public class L3Data implements Serializable {
 
 	private String ipv6AddressMode;
 	/**
-	 * Used in {@link NsL3ProtocolData}
+	 * Used in NsL3ProtocolData
 	 */
 	private String ipVersion;
 	/**
-	 * Used in {@link NsL3ProtocolData}#name
+	 * Used in NsL3ProtocolData#name
 	 */
 	private String l3Name;
 	/**
-	 * Used in {@link NsL3ProtocolData}
+	 * Used in NsL3ProtocolData
 	 */
 	private String cidr;
 
