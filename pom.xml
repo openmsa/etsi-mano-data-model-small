@@ -22,7 +22,7 @@
 	<module>mano-db-connection</module>
 	</modules>
 	<scm>
-		<developerConnection>scm:git:https://github.com/openmsa/etsi-mano-data-model-small.git</developerConnection>
+		<developerConnection>scm:git:ssh://git@github.com/openmsa/etsi-mano-data-model-small.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 	<properties>
