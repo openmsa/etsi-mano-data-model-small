@@ -44,7 +44,7 @@ public class KeystoneAuthV3 extends BasicAccess {
 	 * The OpenStack region to use for the VIM connection.
 	 */
 	@NotNull
-	private String region;
+	private String region = "RegionOne";
 	/**
 	 * The OpenStack project to use for the VIM connection.
 	 */
