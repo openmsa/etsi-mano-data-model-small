@@ -80,6 +80,8 @@ public class K8sServers implements Serializable {
 	 */
 	private String vimResourceId;
 
+	private String token;
+
 	@ElementCollection(fetch = FetchType.EAGER)
 	private List<String> masterAddresses;
 
