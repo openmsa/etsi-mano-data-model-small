@@ -26,6 +26,7 @@ module com.ubiqube.etsi.mano.dao.mano.vim {
 	requires com.ubiqube.etsi.mano.dao.mano.version;
 	requires com.ubiqube.etsi.mano.dao.base;
 	requires org.hibernate.orm.core;
+	requires org.jspecify;
 	requires org.mapstruct;
 	requires lombok;
 	requires jakarta.annotation;

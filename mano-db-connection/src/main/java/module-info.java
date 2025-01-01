@@ -20,6 +20,7 @@ module com.ubiqube.etsi.mano.dao.mano {
 	exports com.ubiqube.etsi.mano.dao.mano.ii;
 
 	requires lombok;
+	requires org.jspecify;
 	requires jakarta.annotation;
 	requires jakarta.persistence;
 	requires jakarta.validation;

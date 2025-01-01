@@ -36,8 +36,8 @@ import com.ubiqube.etsi.mano.service.auth.model.ServerConnection;
 import com.ubiqube.etsi.mano.service.auth.model.ServerType;
 import com.ubiqube.etsi.mano.utils.ToStringUtil;
 
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
@@ -65,9 +65,9 @@ public class Servers extends ServerConnection implements Auditable {
 	private static final long serialVersionUID = 1L;
 
 	@Builder
-	public Servers(final UUID id, final String name, final AuthentificationInformations authentification, @Nonnull final URI url, final boolean ignoreSsl, final String tlsCert, @Nullable final String version, @Nullable final ServerType serverType, final long tupleVersion,
+	public Servers(final UUID id, final String name, final AuthentificationInformations authentification, @NonNull final URI url, final boolean ignoreSsl, final String tlsCert, @Nullable final String version, @Nullable final ServerType serverType, final long tupleVersion,
 			final Set<RemoteSubscription> remoteSubscriptions, final PlanStatusType serverStatus, final SubscriptionType subscriptionType, final Set<String> capabilities,
-			final @Nonnull LocalAuth localUser, final String tenantId) {
+			final @NonNull LocalAuth localUser, final String tenantId) {
 		super(id, name, authentification, url, ignoreSsl, tlsCert, version, serverType, tupleVersion);
 		this.remoteSubscriptions = remoteSubscriptions;
 		this.serverStatus = serverStatus;
@@ -104,7 +104,7 @@ public class Servers extends ServerConnection implements Auditable {
 
 	private Audit audit = new Audit();
 
-	public Servers(final AuthentificationInformations authentication, final @Nonnull URI callbackUri) {
+	public Servers(final AuthentificationInformations authentication, final @NonNull URI callbackUri) {
 		super(authentication, callbackUri);
 	}
 

@@ -20,7 +20,7 @@ import java.util.List;
 
 import com.ubiqube.etsi.mano.dao.mano.InterfaceInfo;
 
-import jakarta.annotation.Nullable;
+import org.jspecify.annotations.Nullable;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import lombok.Data;

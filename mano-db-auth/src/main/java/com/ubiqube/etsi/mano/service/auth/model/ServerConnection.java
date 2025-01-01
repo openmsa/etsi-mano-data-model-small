@@ -20,8 +20,8 @@ import java.io.Serializable;
 import java.net.URI;
 import java.util.UUID;
 
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -61,7 +61,7 @@ public class ServerConnection implements Serializable {
 
 	private AuthentificationInformations authentification;
 
-	@Nonnull
+	@NonNull
 	@NotNull
 	private URI url;
 
@@ -79,7 +79,7 @@ public class ServerConnection implements Serializable {
 	@Version
 	private long tupleVersion;
 
-	public ServerConnection(final AuthentificationInformations authentication, @Nonnull final URI callbackUri) {
+	public ServerConnection(final AuthentificationInformations authentication, @NonNull final URI callbackUri) {
 		this.authentification = authentication;
 		this.url = callbackUri;
 	}

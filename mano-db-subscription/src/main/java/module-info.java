@@ -21,4 +21,5 @@ module com.ubiqube.etsi.mano.dao.subscription {
 	requires jakarta.persistence;
 	requires jakarta.validation;
 	requires lombok;
+	requires org.jspecify;
 }

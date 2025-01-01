@@ -20,7 +20,7 @@ import java.io.Serializable;
 
 import com.ubiqube.etsi.mano.utils.ToStringUtil;
 
-import jakarta.annotation.Nullable;
+import org.jspecify.annotations.Nullable;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.OneToOne;

@@ -16,7 +16,7 @@
  */
 package com.ubiqube.etsi.mano.dao.subscription;
 
-import jakarta.annotation.Nonnull;
+import org.jspecify.annotations.NonNull;
 
 /**
  *
@@ -52,7 +52,7 @@ public enum SubscriptionType {
 		value = string;
 	}
 
-	@Nonnull
+	@NonNull
 	@Override
 	public String toString() {
 		return value;

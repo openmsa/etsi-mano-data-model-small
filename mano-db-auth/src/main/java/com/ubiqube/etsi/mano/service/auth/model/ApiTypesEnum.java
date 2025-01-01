@@ -16,7 +16,7 @@
  */
 package com.ubiqube.etsi.mano.service.auth.model;
 
-import jakarta.annotation.Nullable;
+import org.jspecify.annotations.Nullable;
 
 public enum ApiTypesEnum {
 	SOL002("SOL002"),

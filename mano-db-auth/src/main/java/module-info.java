@@ -23,4 +23,5 @@ module com.ubiqube.etsi.mano.service.auth.model {
 	requires jakarta.validation;
 	requires com.ubiqube.etsi.mano.utils;
 	requires lombok;
+	requires org.jspecify;
 }
