@@ -60,6 +60,12 @@ public class VimConnectionInformation extends Connection<InterfaceInfo, AccessIn
 	@Column(unique = true)
 	private String vimId;
 
+	/**
+	 * The id of the vimId where this vim is a child of. This is typically used for
+	 * CCM.
+	 */
+	private String childOf;
+
 	@NotNull
 	private String vimType;
 
