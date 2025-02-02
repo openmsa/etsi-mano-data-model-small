@@ -37,5 +37,11 @@
 			<scope>provided</scope>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>com.ubiqube.mano</groupId>
+			<artifactId>mano-db-test</artifactId>
+			<version>4.0.1-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 </project>
