@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-package com.ubiqube.etsi.mano.dao.mano.vim;
+package com.ubiqube.etsi.mano.dao;
 
 import org.junit.jupiter.api.Test;
 
@@ -23,8 +23,8 @@ import com.ubiqube.etsi.mano.dao.test.ModelTest;
 class ReflectionTest {
 
 	@Test
-	void testName() throws Exception {
-		ModelTest test = new ModelTest();
+	void testName() {
+		ModelTest test = new ModelTest("com.ubiqube.etsi.mano.dao.mano.vim");
 		test.test001();
 	}
 }
