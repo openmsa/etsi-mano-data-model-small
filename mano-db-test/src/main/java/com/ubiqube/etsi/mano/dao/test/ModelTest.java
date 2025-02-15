@@ -35,12 +35,13 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
-import org.reflections.Reflections;
-import org.reflections.scanners.Scanner;
-import org.reflections.scanners.Scanners;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import io.github.classgraph.ClassGraph;
+import io.github.classgraph.ClassInfo;
+import io.github.classgraph.ClassInfoList;
+import io.github.classgraph.ScanResult;
 import nl.jqno.equalsverifier.EqualsVerifier;
 import nl.jqno.equalsverifier.EqualsVerifierReport;
 import nl.jqno.equalsverifier.Warning;
@@ -49,19 +50,20 @@ public class ModelTest {
 
 	private static final Logger LOG = LoggerFactory.getLogger(ModelTest.class);
 
-	private final Reflections reflections;
+	private final String packageName;
 
 	public ModelTest(final String packageName) {
-		final Scanner scanner = Scanners.SubTypes.filterResultsBy(a -> true);
-		reflections = new Reflections(packageName, scanner);
+		this.packageName = packageName;
 	}
 
 	public void test001() {
-		final Map<String, Set<String>> subtype = reflections.getStore().get("SubTypes");
-		subtype.forEach((x, y) -> {
-			handle(x);
-			y.forEach(ModelTest::handle);
-		});
+		try (ScanResult scanResult = new ClassGraph()
+				.enableAllInfo()
+				.acceptPackages(packageName)
+				.scan()) {
+			ClassInfoList allClasses = scanResult.getAllClasses();
+			allClasses.stream().map(ClassInfo::getName).forEach(ModelTest::handle);
+		}
 	}
 
 	private static void handle(final String x) {

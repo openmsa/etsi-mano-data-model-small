@@ -32,8 +32,8 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>org.reflections</groupId>
-			<artifactId>reflections</artifactId>
+			<groupId>io.github.classgraph</groupId>
+			<artifactId>classgraph</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>nl.jqno.equalsverifier</groupId>
