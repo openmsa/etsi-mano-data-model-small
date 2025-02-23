@@ -16,6 +16,10 @@
  */
 module com.ubiqube.etsi.mano.dao.mano.vim {
 	exports com.ubiqube.etsi.mano.dao.mano.vim;
+	exports com.ubiqube.etsi.mano.dao.mano.vim.dto;
+	exports com.ubiqube.etsi.mano.dao.mano.vim.k8s;
+	exports com.ubiqube.etsi.mano.dao.mano.vim.vnffg;
+	exports com.ubiqube.etsi.mano.dao.mano.vim.vnfi;
 
 	requires transitive com.ubiqube.etsi.mano.dao.audit;
 	requires transitive com.ubiqube.etsi.mano.service.auth.model;
