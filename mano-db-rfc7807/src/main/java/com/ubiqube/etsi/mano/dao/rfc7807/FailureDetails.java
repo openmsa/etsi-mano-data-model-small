@@ -20,7 +20,7 @@ import java.io.Serializable;
 import java.net.InetAddress;
 import java.net.URI;
 import java.net.UnknownHostException;
-import java.util.function.Function;
+import java.util.function.UnaryOperator;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -52,7 +52,7 @@ public class FailureDetails implements Serializable {
 	@Convert(converter = UriConverter.class)
 	private URI instance;
 
-	private static final Function<String, String> CUT = text -> {
+	private static final UnaryOperator<String> CUT = text -> {
 		if (null == text) {
 			return null;
 		}

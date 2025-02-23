@@ -16,8 +16,16 @@
  */
 package com.ubiqube.etsi.mano.dao;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.Mockito.mockStatic;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.MockedStatic;
+
+import com.ubiqube.etsi.mano.dao.rfc7807.FailureDetails;
 import com.ubiqube.etsi.mano.dao.test.ModelTest;
 
 class ReflectionTest {
@@ -26,5 +34,20 @@ class ReflectionTest {
 	void testName() {
 		ModelTest testModel = new ModelTest("com.ubiqube.etsi.mano.dao.rfc7807");
 		testModel.test001();
+	}
+
+	@Test
+	void testName2() {
+		FailureDetails fd = new FailureDetails(0, null);
+		assertNotNull(fd);
+	}
+
+	@Test
+	void testName3() {
+		try (MockedStatic<InetAddress> mockUri = mockStatic(InetAddress.class)) {
+			mockUri.when(InetAddress::getLocalHost).thenThrow(UnknownHostException.class);
+			FailureDetails fd = new FailureDetails(0, null);
+			assertNotNull(fd);
+		}
 	}
 }
