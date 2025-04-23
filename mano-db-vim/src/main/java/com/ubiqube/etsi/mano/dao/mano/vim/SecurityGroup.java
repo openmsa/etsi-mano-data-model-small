@@ -22,6 +22,7 @@ import com.ubiqube.etsi.mano.dao.audit.Audit;
 import com.ubiqube.etsi.mano.dao.audit.AuditListener;
 import com.ubiqube.etsi.mano.dao.audit.Auditable;
 import com.ubiqube.etsi.mano.dao.base.BaseEntity;
+import com.ubiqube.etsi.mano.dao.base.ToscaEntity;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -33,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 
 @Entity
 @EntityListeners(AuditListener.class)
-public class SecurityGroup implements BaseEntity, Auditable {
+public class SecurityGroup implements ToscaEntity, BaseEntity, Auditable {
 	/** Serial. */
 	private static final long serialVersionUID = 1L;
 
