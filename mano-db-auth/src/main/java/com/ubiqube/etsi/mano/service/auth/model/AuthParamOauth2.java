@@ -43,12 +43,15 @@ public class AuthParamOauth2 implements Serializable {
 	private String clientId;
 	private String clientSecret;
 	private URI tokenEndpoint;
+	@Column(name = "o2username")
 	private String o2Username;
+	@Column(name = "o2password")
 	private String o2Password;
+	@Column(name = "o2ignore_ssl")
 	private Boolean o2IgnoreSsl;
 	@Enumerated(EnumType.STRING)
 	private OAuth2GrantType grantType;
-	@Column(length = 5000)
+	@Column(name = "o2auth_tls_cert", length = 5000)
 	private String o2AuthTlsCert;
 
 	@Override
