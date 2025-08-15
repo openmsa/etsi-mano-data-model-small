@@ -26,7 +26,7 @@ import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import lombok.Data;
 
-@Entity
+@Entity(name = "openstackv3interface_info")
 @Data
 public class OpenstackV3InterfaceInfo extends InterfaceInfo {
 
