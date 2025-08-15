@@ -21,7 +21,7 @@ import com.ubiqube.etsi.mano.dao.mano.ii.OpenstackV3InterfaceInfo;
 
 import jakarta.persistence.Entity;
 
-@Entity
+@Entity(name = "openstack_keystonev3connection")
 public class OpenstackKeystoneV3Connection extends Connection<OpenstackV3InterfaceInfo, KeystoneAuthV3> {
 
 	private static final long serialVersionUID = 1L;
