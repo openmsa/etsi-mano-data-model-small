@@ -23,7 +23,7 @@ import jakarta.persistence.Entity;
 import lombok.Data;
 
 @Data
-@Entity
+@Entity(name = "etsik8s_interface_info")
 public class EtsiK8sInterfaceInfo extends InterfaceInfo {
 
 	private static final long serialVersionUID = 1L;
