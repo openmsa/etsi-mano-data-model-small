@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-@Entity
+@Entity(name = "keystone_authv3")
 @Data
 @NoArgsConstructor
 @SuperBuilder
