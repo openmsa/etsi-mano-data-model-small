@@ -28,7 +28,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 @Data
-@Entity
+@Entity(name = "oauth2access")
 @NoArgsConstructor
 @SuperBuilder
 public class OAuth2Access extends AccessInfo {
