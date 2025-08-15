@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 @Data
-@Entity
+@Entity(name = "kubernetesv1auth")
 @NoArgsConstructor
 @SuperBuilder
 public class KubernetesV1Auth extends AccessInfo {
