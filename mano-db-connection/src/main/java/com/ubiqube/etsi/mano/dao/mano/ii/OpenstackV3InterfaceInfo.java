@@ -18,9 +18,10 @@ package com.ubiqube.etsi.mano.dao.mano.ii;
 
 import java.util.List;
 
+import org.jspecify.annotations.Nullable;
+
 import com.ubiqube.etsi.mano.dao.mano.InterfaceInfo;
 
-import org.jspecify.annotations.Nullable;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import lombok.Data;
