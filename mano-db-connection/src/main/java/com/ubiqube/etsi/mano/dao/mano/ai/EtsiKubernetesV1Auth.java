@@ -22,7 +22,7 @@ import jakarta.persistence.Entity;
 import lombok.Data;
 
 @Data
-@Entity
+@Entity(name = "etsi_kubernetesv1auth")
 public class EtsiKubernetesV1Auth extends AccessInfo {
 
 	private static final long serialVersionUID = 1L;
