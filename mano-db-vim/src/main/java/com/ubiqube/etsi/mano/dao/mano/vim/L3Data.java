@@ -18,6 +18,7 @@ package com.ubiqube.etsi.mano.dao.mano.vim;
 
 import java.io.Serializable;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 
 /**
@@ -32,7 +33,7 @@ public class L3Data implements Serializable {
 	 * XXX Side effect of embedded ? Must be an Object.
 	 */
 	private Boolean dhcpEnabled;
-
+	@Column(name = "ipv6address_mode")
 	private String ipv6AddressMode;
 	/**
 	 * Used in NsL3ProtocolData
@@ -41,6 +42,7 @@ public class L3Data implements Serializable {
 	/**
 	 * Used in NsL3ProtocolData#name
 	 */
+	@Column(name = "l3name")
 	private String l3Name;
 	/**
 	 * Used in NsL3ProtocolData
