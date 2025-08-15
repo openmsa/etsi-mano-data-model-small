@@ -22,7 +22,7 @@ import jakarta.persistence.Entity;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
-@Entity
+@Entity(name = "keystone_authv2")
 @Data
 public class KeystoneAuthV2 extends AccessInfo {
 	private static final long serialVersionUID = 1L;
