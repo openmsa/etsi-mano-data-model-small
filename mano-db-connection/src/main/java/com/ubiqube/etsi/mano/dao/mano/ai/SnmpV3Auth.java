@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 @Data
-@Entity
+@Entity(name = "snmpv3auth")
 @NoArgsConstructor
 @SuperBuilder
 public class SnmpV3Auth extends AccessInfo {
